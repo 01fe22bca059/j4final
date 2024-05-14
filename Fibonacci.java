@@ -1,17 +1,19 @@
 package J4;
 public class Fibonacci {
-    public static void main(String[] args) {
-        int n = 10;
-        System.out.println("Fibonacci Series:");
-        for (int i = 0; i < n; i++) {
-            System.out.print(fibonacci(i) + " ");
-        }
+    public static int fibRecursion(int count) {
+      if (count == 0) {
+        return 0;
+      } 
+      if (count == 1 || count == 2) {
+        return 1;
+      }
+      return fibRecursion(count - 1) + fibRecursion(count - 2);
     }
-    public static int fibonacci(int n) {
-        if (n <= 1) {
-            return n;
-        } else {
-            return fibonacci(n - 1) + fibonacci(n - 2);
-        }
+    public static void main(String args[]) {
+      int fib_len = 9;  
+      System.out.print("Fibonacci Series of " + fib_len + " numbers is: \n");  
+      for (int i = 0; i < fib_len; i++) {
+        System.out.print(fibRecursion(i) + " ");
+      }
     }
-}
+  }
