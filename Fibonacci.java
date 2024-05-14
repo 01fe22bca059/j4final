@@ -1,4 +1,4 @@
-public class fibonacci {
+ class fibonacci {
     public static int fibRecursion(int count) {
       if (count == 0) {
         return 0;
