@@ -1,12 +1,18 @@
-package J4;
-public class Fibonacci {
-    public static void main(String[] args) {
-        int n = 10; // Number of terms in the Fibonacci series
-        System.out.println("Fibonacci Series for " + n + " terms:");
-        int firstTerm = 0, secondTerm = 1;
-        System.out.print(firstTerm + " " + secondTerm + " ");
-        for (int i = 3; i <= n; i++) {
-            int nextTerm = firstTerm + secondTerm;
-            System.out.print(nextTerm + " ");
-            firstTerm = secondTerm;
-            secondTerm = nextTerm; }}}
+public class fibonacci {
+    public static int fibRecursion(int count) {
+      if (count == 0) {
+        return 0;
+      } 
+      if (count == 1 || count == 2) {
+        return 1;
+      }
+      return fibRecursion(count - 1) + fibRecursion(count - 2);
+    }
+    public static void main(String args[]) {
+      int fib_len = 9;  
+      System.out.print("Fibonacci Series of " + fib_len + " numbers is: \n");  
+      for (int i = 0; i < fib_len; i++) {
+        System.out.print(fibRecursion(i) + " ");
+      }
+    }
+  }
