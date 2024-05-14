@@ -1,5 +1,5 @@
 package J4;
-public class Fibonacci {
+public class Fib {
     public static int fibRecursion(int count) {
       if (count == 0) {
         return 0;
